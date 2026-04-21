@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>EFI · Today</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <h2 id="greeting">Good morning,</h2>
+                <p id="studentName" class="student-name">—</p>
+            </div>
+            <div class="streak-badge" id="streakBadge">🔥 0 days</div>
+        </div>
+        
+        <!-- Day indicator -->
+        <div class="day-indicator">
+            <span class="day-label">Day</span>
+            <span class="day-number" id="currentDay">1</span>
+        </div>
+        
+        <!-- Modules container -->
+        <div id="modulesContainer" class="modules-container">
+            <!-- Dynamically loaded -->
+        </div>
+        
+        <!-- Bottom navigation -->
+        <div class="bottom-nav">
+            <button class="nav-btn active" data-tab="today">Today</button>
+            <button class="nav-btn" data-tab="quiz">Quiz</button>
+            <button class="nav-btn" data-tab="progress">Progress</button>
+        </div>
+    </div>
+    
+    <!-- Quiz Modal (hidden by default) -->
+    <div id="quizModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Weekly Quiz</h3>
+                <button class="close-btn" onclick="closeQuiz()">✕</button>
+            </div>
+            <div id="quizContainer"></div>
+        </div>
+    </div>
+    
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
